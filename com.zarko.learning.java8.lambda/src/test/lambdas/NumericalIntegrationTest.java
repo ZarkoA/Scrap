@@ -8,8 +8,8 @@ class NumericalIntegrationTest {
     public static void main(String[] args){
         integrationTest(x -> x*x, 10, 100);
         integrationTest(x -> Math.pow(x, 3), 50, 500);
-        integrationTest(x -> Math.sin(x), 0, Math.PI);
-        integrationTest(x -> Math.exp(x), 2, 20);
+        integrationTest(Math::sin, 0, Math.PI);
+        integrationTest(Math::exp, 2, 20);
     }
 
     public static void integrationTest(Integrable function, double x1, double x2){
